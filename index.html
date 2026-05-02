@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота №7 — RxJS Todo</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <h1>Todo-список</h1>
+        <p class="subtitle">
+          Приклад реактивного керування потоком даних за допомогою RxJS
+        </p>
+
+        <form id="todoForm" class="form">
+          <input
+            id="todoInput"
+            type="text"
+            placeholder="Введіть нове завдання..."
+            autocomplete="off"
+          />
+          <button type="submit">Додати</button>
+        </form>
+
+        <div class="toolbar">
+          <label for="filterSelect">Фільтр:</label>
+          <select id="filterSelect">
+            <option value="all">Усі</option>
+            <option value="active">Активні</option>
+            <option value="done">Виконані</option>
+          </select>
+        </div>
+
+        <ul id="todoList" class="todo-list"></ul>
+
+        <p id="counter" class="counter"></p>
+      </section>
+    </main>
+
+    <!-- RxJS підключається як звичайний скрипт, тому сайт працює на GitHub Pages без npm build -->
+    <script src="https://cdn.jsdelivr.net/npm/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
